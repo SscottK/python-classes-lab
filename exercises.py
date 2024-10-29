@@ -73,10 +73,12 @@ class Game():
         board_full = 9
         spaces_filled = 0        
         for space in self.board:
-            if space == None or self.winner == None:                        
+            if self.board[space] == None and not self.winner:
                 pass
-            elif space and not self.winner:
-                spaces_filled += 1
+            else:
+                spaces_filled += 1       
+          
+            
         if board_full == spaces_filled:
             self.tie = True
         
