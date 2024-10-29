@@ -79,7 +79,7 @@ class Game():
                 spaces_filled += 1       
           
             
-        if board_full == spaces_filled:
+        if spaces_filled == 9 and not self.winner:
             self.tie = True
         
         
